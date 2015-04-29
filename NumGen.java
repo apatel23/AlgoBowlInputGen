@@ -32,7 +32,7 @@ public class NumGen {
 		System.out.println("\nMachines: ");
 		System.out.println("num: " + m);
 		displayList(speeds);
-		
+		System.out.println("");
 		fw.close();
 	}
 	
@@ -52,7 +52,8 @@ public class NumGen {
 		
 		for(int i = 0; i < num; i++) {
 			// task processing times in [1,10000]
-			int currentTask = rand.nextInt(10000) + 1; 
+			int currentTask = rand.nextInt(10000) + 1;
+			if(tasks.contains(currentTask)) currentTask+=1;
 			tasks.add(currentTask);
 		}
 		return tasks; 
